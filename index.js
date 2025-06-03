@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const employeeRoutes = require('./routers/employeeRoutes');
+const authRoutes = require('./routers/authRoutes');
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/api/employees', employeeRoutes);
+app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {
   console.log("Server is running on port: ", PORT);

@@ -8,9 +8,21 @@
     "department": "Quality_Assurance",
     "phone": "9159840977",
     "employeeid": "TT05SW007",
-    "username": "Astalakshmi_S",
     "password": "$2b$10$LBKHttYMhySfsCpxz91C8.CCfcvNiFd2zbeRXQ8Ajpcojqi9N6fhS",
     "joinDate": "2024-06-21",
     "role": "user"
+  },
+  {
+    "id": 1748968791407,
+    "firstName": "Nandhakumar",
+    "lastName": "S",
+    "email": "nandhakumarsvan@gmail.com",
+    "position": "managers",
+    "department": "HR",
+    "phone": "9626449260",
+    "employeeid": "TT05SW002",
+    "password": "$2b$10$xFgkOSdxv9vXoBHvm88ua.DX9EDNQ4Bt.xPsImSaaFLy2SxT5tBf2",
+    "joinDate": "2025-06-03",
+    "role": "admin"
   }
 ]

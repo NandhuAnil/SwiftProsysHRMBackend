@@ -8,7 +8,7 @@ exports.addEmployee = async (req, res) => {
   try {
     const {
       firstName, lastName, email, position, department,
-      phone, employeeid, username, password, joinDate
+      phone, employeeid, password, joinDate
     } = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -22,7 +22,6 @@ exports.addEmployee = async (req, res) => {
       department,
       phone,
       employeeid,
-      username,
       password: hashedPassword,
       joinDate,
       role: 'user'
