@@ -30,3 +30,21 @@ exports.login = async (req, res) => {
   }
 };
 
+exports.getCurrentUser = (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return res.status(401).json({ error: 'Authorization header missing' });
+
+  const token = authHeader.split(' ')[1];
+  if (!token) return res.status(401).json({ error: 'Token missing' });
+
+  try {
+    const decoded = jwt.verify(token, SECRET_KEY);
+    const employees = getEmployees();
+    const user = employees.find(emp => emp.id === decoded.id);
+    if (!user) return res.status(404).json({ error: 'User not found' });
+
+    res.json(user);
+  } catch (err) {
+    res.status(403).json({ error: 'Invalid token' });
+  }
+};

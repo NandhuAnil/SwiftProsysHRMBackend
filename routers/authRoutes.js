@@ -5,6 +5,7 @@ const { verifyToken, authorizeRoles } = require('../middleware/authMiddleware');
 
 // Login route
 router.post('/login', authController.login);
+router.get('/me', authController.getCurrentUser);
 
 // Example protected route for 'admin' role
 // router.get('/admin/dashboard', verifyToken, authorizeRoles('admin'), (req, res) => {
