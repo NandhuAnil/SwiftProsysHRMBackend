@@ -8,7 +8,7 @@ exports.addEmployee = async (req, res) => {
   try {
     const {
       firstName, lastName, email, position, department,
-      phone, employeeid, password, joinDate
+      phone, employeeid, password, joinDate, role
     } = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -24,14 +24,14 @@ exports.addEmployee = async (req, res) => {
       employeeid,
       password: hashedPassword,
       joinDate,
-      role: 'user'
+      role
     };
 
     const employees = getEmployees();
     employees.push(newEmployee);
     saveEmployees(employees);
 
-    const token = jwt.sign({ id: newEmployee.id, role: 'user' }, SECRET_KEY, { expiresIn: '1h' });
+    const token = jwt.sign({ id: newEmployee.id, role }, SECRET_KEY, { expiresIn: '1h' });
 
     res.status(201).json({ message: 'Employee added successfully', token });
   } catch (err) {

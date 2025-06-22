@@ -24,5 +24,31 @@
     "password": "$2b$10$xFgkOSdxv9vXoBHvm88ua.DX9EDNQ4Bt.xPsImSaaFLy2SxT5tBf2",
     "joinDate": "2025-06-03",
     "role": "admin"
+  },
+  {
+    "id": 1750603862821,
+    "firstName": "Bakiya",
+    "lastName": "Srinivasan",
+    "email": "astalakshmisvan@gmail.com",
+    "position": "project_leader",
+    "department": "quality_check",
+    "phone": "9361266961",
+    "employeeid": "TT05SW008",
+    "password": "$2b$10$X32A8ODRXRcu2pdbMR57o.Dm0uqilUIn3yv.Mt7Cd1oEio5U1DDQS",
+    "joinDate": "2025-06-19",
+    "role": "user"
+  },
+  {
+    "id": 1750603954723,
+    "firstName": "vennapaiya",
+    "lastName": "S",
+    "email": "nandhu@gmail.com",
+    "position": "manager",
+    "department": "project_training",
+    "phone": "74795430064",
+    "employeeid": "TT05SW009",
+    "password": "$2b$10$mVay4tc4WmC5gelpqO8bLepPoLVkkybi/k.AgBNb2sUmfciUOHs6W",
+    "joinDate": "2025-06-03",
+    "role": "admin"
   }
 ]
